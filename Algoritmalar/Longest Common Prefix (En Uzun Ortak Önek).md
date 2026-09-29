@@ -1,4 +1,8 @@
 Verilen bir string dizisindeki (kelime listesindeki) tüm kelimelerin ortak olan en uzun başlangıç ekini bulma problemidir.
+Örneğin,
+
+Girdi: strs = ["flower","flow","flight"]
+Çıktı: "fl"
 
 **Çözüm Mantığı:**
 - Dizideki ilk eleman referans alınır ve bu elemanın harfleri üzerinden sırayla bir döngü kurulur.
