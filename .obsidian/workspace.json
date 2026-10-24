@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "f140aac1e67dd66d",
+        "id": "753e9b9008ee1e57",
         "type": "tabs",
         "children": [
           {
-            "id": "bd37d04bc2477f5c",
+            "id": "14809705700eeecb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmalar/Longest Common Prefix (En Uzun Ortak Önek).md",
+                "file": "Derin Öğrenme/Derin Dizi Modelleme.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Longest Common Prefix (En Uzun Ortak Önek)"
+              "title": "Derin Dizi Modelleme"
             }
           }
         ]
@@ -83,7 +83,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 369.5
   },
   "right": {
     "id": "1d1f92943e2f1b3f",
@@ -185,15 +185,59 @@
       "daily-notes:Bugünün Notunu Aç": false,
       "templates:Şablon ekle": false,
       "command-palette:Komut paletini aç": false,
-      "bases:Yeni taban oluştur": false
+      "bases:Yeni taban oluştur": false,
+      "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "1356f5e6d5c3d964",
+  "active": "14809705700eeecb",
   "lastOpenFiles": [
-    "Algoritmalar/Longest Common Prefix (En Uzun Ortak Önek).md",
-    "Algoritmalar/Valid Parentheses (Geçerli Parantezler).md",
+    "Derin Öğrenme/Derin Öğrenme Giriş.md",
+    "Derin Öğrenme/Derin Dizi Modelleme.md",
+    "Linux Nobara Komutlar/Sık Kullanılan Komutlar.md",
     "Okumalar/Nefesi Tutku Olan Kadın Afife Jale -- Osman Balcıgil.md",
-    "Algoritmalar",
-    "Okumalar"
+    "Linux Nobara Komutlar/Cloudflare Tunnel.md",
+    "Linux Nobara Komutlar",
+    "Excalidraw/derin-dizi-modelleme/neurons-with-recurrence.md",
+    "Excalidraw/derin-dizi-modelleme/neurons-with-recurrence.svg",
+    "Excalidraw/derin-dizi-modelleme/time-step-relation.md",
+    "Excalidraw/derin-dizi-modelleme/time-step.svg",
+    "Excalidraw/derin-dizi-modelleme/time-step.md",
+    "Excalidraw/derin-dizi-modelleme/time-step-relation.svg",
+    "Excalidraw/derin-dizi-modelleme/feed-forward-network-revisit.svg",
+    "Excalidraw/derin-dizi-modelleme/feed-forward-network-revisit.md",
+    "Excalidraw/derin-dizi-modelleme/Drawing 2026-10-20 19.45.00.excalidraw.svg",
+    "Excalidraw/derin-dizi-modelleme/ball-prediction.md",
+    "Excalidraw/derin-dizi-modelleme/ball-prediction.svg",
+    "Excalidraw/derin-dizi-modelleme",
+    "Excalidraw/derin-öğrenme/deep-neural-network.md",
+    "Sistem Tasarım/Biletix Sistem Tasarımı.md",
+    "Algoritmalar/Longest Common Prefix (En Uzun Ortak Önek).md",
+    "Excalidraw/derin-öğrenme/the-perceptron-forward-propagation.md",
+    "Excalidraw/derin-öğrenme/the-perceptron-forward-propagation.excalidraw.svg",
+    "Excalidraw/derin-öğrenme/the-perceptron-forward-propagation.svg",
+    "Excalidraw/derin-öğrenme/single-layer-neural-network.md",
+    "Excalidraw/derin-öğrenme/single-layer-neural-network.excalidraw.svg",
+    "Excalidraw/derin-öğrenme/single-layer-neural-network.svg",
+    "Excalidraw/derin-öğrenme/multi-output-perceptron.md",
+    "Excalidraw/derin-öğrenme/early-stopping.md",
+    "Excalidraw/derin-öğrenme/overfitting.md",
+    "Excalidraw/derin-öğrenme/gradient-backpropagation.md",
+    "Excalidraw/derin-öğrenme/Drawing 2026-10-17 17.37.26.excalidraw.md",
+    "Excalidraw/sistem-tasarım/system-design-tools-tr.md",
+    "Excalidraw/sistem-tasarım/system-design-tools.md",
+    "Excalidraw/sistem-tasarım/system-design-tools-tr 1.md",
+    "Excalidraw/sistem-tasarım/Drawing 2026-10-17 14.37.02.excalidraw.md",
+    "Excalidraw/sistem-tasarım/biletix-system-design.md",
+    "Excalidraw/Drawing 2026-10-16 17.05.34.excalidraw.md",
+    "Excalidraw/sistem-tasarım",
+    "Excalidraw/derin-öğrenme",
+    "Sistem Tasarım",
+    "Excalidraw",
+    "Derin Öğrenme/Başlıksız.canvas",
+    "Derin Öğrenme",
+    "Başlıksız.base",
+    "Algoritmalar/longest",
+    "Algoritmalar/test",
+    "Başlıksız.canvas"
   ]
 }
