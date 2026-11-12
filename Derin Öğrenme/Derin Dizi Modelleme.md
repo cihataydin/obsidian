@@ -59,3 +59,97 @@ $$
 $$
 \hat{y}_t=W^T_{hy}h_t
 $$
+
+Her adımda aynı ağırlık matrisleri kullanılır.
+
+`TensorFlow` ile tekrarlayan sinir ağı tasarlayalım.
+
+```python
+class MyRNNCell(tf.keras.layers.Layer):
+	def __init__(self, rnn_units, input_dim, output_dim):
+		super(MyRNNCell,self).__init__()
+		
+		# initialize weight matrices
+		self.W_xh = self.add_weight([rnn_units, input_dim])
+		self.W_hh = self.add_weight([rnn_units, rnn_units])
+		self.W_hy = self.add_weight([output_dim, rnn_units])
+		
+		# initialzie hidden state to zeros
+		self.h = tf.zeros([rnn_units, 1])
+		
+	def call(self, x):
+		# update the hidden state
+		self.h = tf.math.tanh(self.W_hh * self.h + self.W_xh * x)
+		
+		# compute the output
+		output = self.W_hy * self.h
+		
+		# return the current output and hidden state
+		return output, self.h
+```
+
+Hazır kütüphane ile RNN kuralım,
+
+```python
+from tf.keras.layers import SimpleRNN
+
+model = SimpleRNN(rnn_units)
+
+from torch.nn import RNN
+
+model = RNN(input_size, rnn_units)
+```
+
+### Tasarım Kriterleri
+
+- Verilerin veya cümlelerin farklı uzunluklarda olabilmesi ile başa çıkmak.
+- Dzideki uzak geçmişte yer alan ögeler ile güncel ögeler arasındaki ilişki ve bağımlılıkları koruyabilmek.
+- Ögelerin dizilim sırasını kaybetmemek
+- Dizinin farklı konumlarında aynı parametreleri kullanmak.
+
+### Bir Sonraki Kelimeyi Tahmin Etmek
+
+![[next-word.svg]]
+
+Sinir ağı için bir kodlama diline ihtiyacımız var. Çünkü ağ sayısal veriler kabul etmektedir.
+
+#### Gömme
+
+![[embedding.svg]]
+
+#### Değişken Dizi Uzunluğunu Ele Almak
+
+![[next-words-multi.svg]]
+
+#### Model Uzun Süreli Bağımlılıklar
+
+"**France** is where I grew up, but I now live in Boston. I speak fluent _____."
+
+Cümlenin tamamlanması için, uzak geçmişten bilgiye ihtiyaç vardır.
+
+#### Sıra Değişimini Yakalama
+
+"The food was good, not bad at all."
+
+"The food was bad, not good at all."
+
+### Zaman İçinde Geri Yayılım
+
+![[loss.svg]]
+
+$h_0$ a göre gradyan hesablanır.
+
+### RNN Uygulama ve Limitler
+
+- Kodlama darboğazı, girdi boyutu sabit olmamasına karşın, sabit boyutlu bir vektöre gömme yapılır ve veri kaybına uğranır.
+- Yavaş ve paralelleştirme yok.
+- Uzun vadeli bağımlılıkları öğrenememe.
+
+### Tek ihtiyacınız Olan Dikkat -- Attention is All You Need
+
+- Pozisyon bilgisini kodla.
+- Sorgu, anahtar, değer bilgisini çıkar.
+- Dikkat matrisini hesapla.
+- Özellikleri çıkar yüksek dikkat ile.
+
+Dikkat skoru, sorgu ve anahtar arasındaki benzerlik miktarı kadardır. Kosinus benzerliği olarak adlandırılır.
