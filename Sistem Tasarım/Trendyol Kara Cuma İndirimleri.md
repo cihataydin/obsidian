@@ -152,9 +152,7 @@ PostgreSQL’de insert ve update işlemleri, her seferinde veri dosyasına (disk
 
 Veritabanındaki değişiklikleri neredeyse anlık yakalama yaklaşımına **CDC** denir. PostgreSQL’de `wal_level = logical` ayarı yapılarak WAL kayıtları okunabilir hale getirilir. **Debezium**, bir logical replication client olarak bu kayıtları okur, standart bir olay formatına çevirir ve Kafka’ya aktarır. Bir consumer ile bu yapı, Elasticsearch’i PostgreSQL ile senkron tutmak için kullanılabilir.
 
-Peki, veriyi veritabanına yazdıktan sonra herhangi bir problemden dolayı veri değişikliği (event) Kafka’ya asenkron olarak gönderilemezse ne olur? İşte tam bu noktada **Outbox Pattern** devreye girer. Uygulama, veritabanını güncellediği transaction içerisinde aynı zamanda outbox tablosuna da ilgili olayı yazar. Böylece veri ile event ya ikisi birlikte kaydedilir ya da hiç kaydedilmez.
-
-Debezium, bu tabloyu veritabanının değişiklik günlüğü (WAL - Write-Ahead Log) üzerinden okuyarak olayları Kafka’ya iletir. Debezium bir süre çalışmasa bile kaldığı noktayı hatırlar ve tekrar ayağa kalktığında kaldığı yerden devam eder; böylece hiçbir olay kaybolmaz. Olaylar "en az bir kez" (at-least-once) iletildiği için consumer’lar aynı olayı tekrar alma ihtimaline karşı **idempotent** olacak şekilde tasarlanmalıdır.
+Peki, veriyi veritabanına yazdıktan sonra herhangi bir problemden dolayı veri değişikliği (event) Kafka’ya asenkron olarak gönderilemezse ne olur? İşte tam bu noktada **Outbox Pattern** devreye girer. Uygulama, veritabanını güncellediği transaction içerisinde aynı zamanda outbox tablosuna da ilgili olayı yazar. Böylece veri ile event ya ikisi birlikte kaydedilir ya da hiç kaydedilmez. Debezium, bu tabloyu veritabanının değişiklik günlüğü (WAL - Write-Ahead Log) üzerinden okuyarak olayları Kafka’ya iletir. Debezium bir süre çalışmasa bile kaldığı noktayı hatırlar ve tekrar ayağa kalktığında kaldığı yerden devam eder; böylece hiçbir olay kaybolmaz. Olaylar "en az bir kez" (at-least-once) iletildiği için consumer’lar aynı olayı tekrar alma ihtimaline karşı **idempotent** olacak şekilde tasarlanmalıdır.
 
 ![[trendyol-cdc.svg]]
 

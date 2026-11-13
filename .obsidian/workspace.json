@@ -13,10 +13,10 @@
             "state": {
               "type": "excalidraw",
               "state": {
-                "file": "Excalidraw/sistem-tasarım/biletix-system-design.md"
+                "file": "Excalidraw/sistem-tasarım/trendyol-system-design.md"
               },
               "icon": "excalidraw-icon",
-              "title": "biletix-system-design"
+              "title": "trendyol-system-design"
             }
           }
         ]
@@ -189,20 +189,21 @@
   },
   "active": "aa89f98966c21e56",
   "lastOpenFiles": [
-    "Excalidraw/sistem-tasarım/system-design-tools-tr.md",
-    "Sistem Tasarım/Trendyol Kara Cuma İndirimleri.md",
-    "Sistem Tasarım/Biletix Sistem Tasarımı.md",
+    "Excalidraw/sistem-tasarım/trendyol-system-design.svg",
     "Excalidraw/sistem-tasarım/trendyol-system-design.md",
+    "Excalidraw/sistem-tasarım/trendyol-cdc.md",
+    "Sistem Tasarım/Trendyol Kara Cuma İndirimleri.md",
+    "Excalidraw/sistem-tasarım/biletix-system-design.md",
+    "Excalidraw/sistem-tasarım/system-design-tools-tr.md",
+    "Sistem Tasarım/Biletix Sistem Tasarımı.md",
     "Linux Nobara/Graphify & opencode.md",
     "Linux Nobara/Cloudflare Tunnel.md",
     "Okumalar/Nefesi Tutku Olan Kadın Afife Jale -- Osman Balcıgil.md",
     "Linux Nobara/Sık Kullanılan Komutlar.md",
     "Excalidraw/sistem-tasarım/trendyol-cdc.svg",
-    "Excalidraw/sistem-tasarım/trendyol-cdc.md",
     "Excalidraw/sistem-tasarım/system-design-tools.md",
     "Excalidraw/sistem-tasarım/biletix-system-design.svg",
     "Excalidraw/sistem-tasarım/Drawing 2026-11-05 17.41.21.excalidraw.svg",
-    "Excalidraw/sistem-tasarım/trendyol-system-design.svg",
     "Derin Öğrenme/Derin Öğrenme Giriş.md",
     "Derin Öğrenme/Derin Dizi Modelleme.md",
     "Excalidraw/sistem-tasarım/system-design-tools.svg",
@@ -225,7 +226,6 @@
     "Excalidraw/derin-dizi-modelleme",
     "Excalidraw/derin-öğrenme/deep-neural-network.md",
     "Algoritmalar/Longest Common Prefix (En Uzun Ortak Önek).md",
-    "Excalidraw/derin-öğrenme/the-perceptron-forward-propagation.md",
     "Excalidraw/sistem-tasarım",
     "Excalidraw/derin-öğrenme",
     "Sistem Tasarım",
